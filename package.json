@@ -6,9 +6,24 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "David Peer",
+  "author": {
+    "name": "David Peer",
+    "email": "dudi.peer@gmail.com"
+  },
   "license": "Apache-2.0",
-  "repository": "https://github.com/dpeer/https-tunnel",
+  "homepage": "https://github.com/dpeer/https-tunnel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dpeer/https-tunnel.git"
+  },
+  "keywords": [
+    "https",
+    "tunnel",
+    "proxy"
+  ],
+  "bugs": {
+    "url": "https://github.com/dpeer/https-tunnel/issues"
+  },
   "dependencies": {
     "nested-error-stacks": "^2.1.0",
     "socket.io": "^2.1.1",
