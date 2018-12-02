@@ -5,10 +5,12 @@ const express = require('express');
 const app = express();
 
 const options = {
-    key: fs.readFileSync('./security/app/app-server-key.pem'),
-    cert: fs.readFileSync('./security/app/app-server-crt.pem'),
-    //requestCert: true,            //add for client cert
-    //rejectUnauthorized: false     //add for client cert
+    isServer: true,
+    ca: fs.readFileSync('./security/app/ca-chain1.cert.pem'),
+    key: fs.readFileSync('./security/app/www.example.com.key.pem'),
+    cert: fs.readFileSync('./security/app/www.example.com.cert.pem'),
+    requestCert: true,            //add for client cert
+    //rejectUnauthorized: false
 };
 const argv = require('yargs')
     .usage('Usage: $0 -p [port]')

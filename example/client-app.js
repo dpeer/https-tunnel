@@ -22,8 +22,10 @@ const argv = require('yargs')
     .argv;
 
 const tlsOptions = {
-    cert: fs.readFileSync('./security/app/app-client1-crt.pem'),
-    key: fs.readFileSync('./security/app/app-client1-key.pem'),
+    isServer: false,
+    //ca: fs.readFileSync('./security/app/app-ca-crt.pem'),
+    cert: fs.readFileSync('./security/app/client1.cert.pem'),
+    key: fs.readFileSync('./security/app/client1.key.pem'),
 };
 
 const reqOptions = {
